@@ -59,3 +59,23 @@ tcpdump -A -s 0 'host {HTTP_HOST} and tcp port {HTTP_PORT} and (((ip[2:2] - ((ip
 jps -mlv
 ```
 
+### maven dependency tree
+
+```shell
+mvn --settings ~/.m2/settings.xml dependency:tree
+```
+
+### maven dependency of a package
+
+```shell
+mvn dependency:tree -Dincludes=io.dropwizard.metrics:metrics-jetty9
+```
+
+## 6、Clojure
+
+### generate pom.xml
+
+```shell
+lein pom
+```
+
