@@ -15,6 +15,12 @@ cat /etc/os-release
 cat /etc/centos-release
 ```
 
+### os kernel version
+
+```shell
+uname -a
+```
+
 ## 2、Database
 
 ### mysql login
