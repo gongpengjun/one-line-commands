@@ -6,13 +6,13 @@
 ### ubuntu version check
 
 ```shell
-$ cat /etc/os-release
+cat /etc/os-release
 ```
 
 ### centos version check
 
 ```shell
-$ cat /etc/centos-release
+cat /etc/centos-release
 ```
 
 ## 2、Database
@@ -20,13 +20,13 @@ $ cat /etc/centos-release
 ### mysql login
 
 ```shell
-$ mysql -h{MYSQL_HOST} -P{MYSQL_PORT} -u{MYSQL_USERNAME} -p{MYSQL_PASSWORD}
+mysql -h{MYSQL_HOST} -P{MYSQL_PORT} -u{MYSQL_USERNAME} -p{MYSQL_PASSWORD}
 ```
 
 ### mysql tcpdump
 
 ```shell
-# tcpdump -s 0 -l -w - host {mysql_host_ip} and port {mysql_port} | strings
+tcpdump -s 0 -l -w - host {mysql_host_ip} and port {mysql_port} | strings
 ```
 
 ## 3、TCP
@@ -34,13 +34,13 @@ $ mysql -h{MYSQL_HOST} -P{MYSQL_PORT} -u{MYSQL_USERNAME} -p{MYSQL_PASSWORD}
 ### tcp port listener process
 
 ```shell
-$ lsof -nP -sTCP:LISTEN -iTCP:{PORT}
+lsof -nP -sTCP:LISTEN -iTCP:{PORT}
 ```
 
 ### process listen ports
 
 ```shell
-$ lsof -a -i -n -P -sTCP:LISTEN -p {PID}
+lsof -a -i -n -P -sTCP:LISTEN -p {PID}
 ```
 
 ## 4、HTTP
@@ -48,6 +48,6 @@ $ lsof -a -i -n -P -sTCP:LISTEN -p {PID}
 ### tcpdump http traffics
 
 ```shell
-$ tcpdump -A -s 0 'host {HTTP_HOST} and tcp port {HTTP_PORT} and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
+tcpdump -A -s 0 'host {HTTP_HOST} and tcp port {HTTP_PORT} and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
 ```
 
