@@ -1,9 +1,21 @@
 # one-line-commands
 
 
+## OS
+
+### ubuntu version check
+
+```shell
+$ cat /etc/os-release
+```
+
+### centos version check
+
+```shell
+$ cat /etc/centos-release
+```
+
 ## Database
-
-
 
 ### mysql login
 
