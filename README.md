@@ -35,6 +35,12 @@ mysql -h{MYSQL_HOST} -P{MYSQL_PORT} -u{MYSQL_USERNAME} -p{MYSQL_PASSWORD}
 tcpdump -s 0 -l -w - host {mysql_host_ip} and port {mysql_port} | strings
 ```
 
+### Influxdb database list
+
+```shell
+curl -s -XPOST 'http://{INFLUXDB_HOST}:{INFLUXDB_PORT}/query?u={INFLUXDB_USERNAME}&p={INFLUXDB_PASSWORD}' --data-urlencode 'q=SHOW DATABASES' | jq
+```
+
 ## 3、TCP
 
 ### tcp port listener process
@@ -73,7 +79,7 @@ mvn --settings ~/.m2/settings.xml dependency:tree
 
 ### maven dependency of a package
 
-```shell
+```
 mvn dependency:tree -Dincludes=io.dropwizard.metrics:metrics-jetty9
 ```
 
