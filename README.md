@@ -51,3 +51,11 @@ lsof -a -i -n -P -sTCP:LISTEN -p {PID}
 tcpdump -A -s 0 'host {HTTP_HOST} and tcp port {HTTP_PORT} and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
 ```
 
+## 5、Java
+
+### find java process
+
+```shell
+jps -mlv
+```
+
