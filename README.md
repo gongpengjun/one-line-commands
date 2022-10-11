@@ -85,6 +85,13 @@ mvn dependency:tree -Dincludes=io.dropwizard.metrics:metrics-jetty9
 
 ## 6、Clojure
 
+### dump dependencies
+
+```shell
+lein deps :tree
+```
+
+
 ### generate pom.xml
 
 ```shell
