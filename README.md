@@ -98,3 +98,12 @@ lein deps :tree
 lein pom
 ```
 
+## 7、Android
+
+从电脑上传文件到Android手机
+
+```shell
+adb push /PC/path/image.png /sdcard/Pictures/   # 图库 - 相册 - 其它相册
+adb push /PC/path/image.png /sdcard/DCIM/       # 图库 - 照相机
+```
+
